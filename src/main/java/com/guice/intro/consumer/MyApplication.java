@@ -2,7 +2,6 @@ package com.guice.intro.consumer;
 
 
 import com.guice.intro.annotations.Email;
-import com.guice.intro.annotations.SMS;
 import com.guice.intro.service.MessageService;
 
 import javax.inject.Inject;
@@ -12,7 +11,7 @@ public class MyApplication implements Consumer {
     private MessageService emailService;
 
     @Inject
-    public  MyApplication (@SMS MessageService messageService) {
+    public  MyApplication (@Email MessageService messageService) {
         this.emailService = messageService;
     }
 

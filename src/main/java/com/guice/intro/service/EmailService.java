@@ -1,14 +1,11 @@
 package com.guice.intro.service;
 
-import javax.inject.Inject;
-
 public class EmailService implements MessageService {
 
     private String emailServiceEndpoint;
     private boolean urlRewrite;
     private boolean skipVerification;
 
-    @Inject
     public EmailService(String emailServiceEndpoint, boolean urlRewrite, boolean skipVerification) {
         this.emailServiceEndpoint = emailServiceEndpoint;
         this.urlRewrite = urlRewrite;
